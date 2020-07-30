@@ -1,0 +1,17 @@
+{
+  "name": "David Johson",
+  "phone": "123-456-7890",
+  "email": "abc@msn.com",
+  "address": [
+    {
+      "id": 1,
+      "street": "123 Main St",
+      "city": "City 1"
+    },
+    {
+      "id": 2,
+      "street": "456 Route 66",
+      "city": "Baham City"
+    }
+  ]
+}

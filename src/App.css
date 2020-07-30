@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+.popup {
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  top: 25vh;
+  left: 25vw;
+  border: solid 2px #333;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+  padding: 10px;
+  display: none;
+}
+.popup.open {
+  display: block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.popup .content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  overflow-y: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.component {display: flex; flex-direction: row;}
+.component .label {width: 100px; text-align: right; padding-right: 5px;}
+.component .input {width: 150px; text-align: left; padding-left: 5px; box-sizing: border-box;}
+.component .input input {width: 100%; box-sizing: border-box;}
+.component .error {color: red; margin-left: 5px;}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }

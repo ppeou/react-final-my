@@ -1,0 +1,59 @@
+{
+  "component": "form",
+  "items": [
+    {"component": "input:text",
+      "metaData": {
+        "dataField": "name",
+        "label": "Your Name"
+      }
+    },
+    {"component": "input:text",
+      "metaData": {
+        "dataField": "phone",
+        "label": "Phone"
+      }
+    },
+    {"component": "input:text",
+      "metaData": {
+        "dataField": "email",
+        "label": "Email"
+      }
+    },
+    {"component": "viewer:json",
+      "metaData": {
+        "dataField": "address",
+        "label": "Address"
+      }
+    },
+    {
+      "component": "input:popup",
+      "metaData": {
+        "dataField": "address",
+        "label": "Address Popup"
+      },
+      "items": [
+        {
+          "component": "input:text",
+          "metaData": {
+            "dataField": "street",
+            "label": "Street"
+          }
+        },
+        {
+          "component": "input:text",
+          "metaData": {
+            "dataField": "city",
+            "label": "City"
+          }
+        },
+        {
+          "component": "button:action",
+          "metaData": {
+            "dataField": "id",
+            "label": "[ - ]"
+          }
+        }
+      ]
+    }
+  ]
+}
