@@ -50,8 +50,12 @@ const addressValidator = validatorForArray(addressRules);
 const requiredArray = value => value && value.length > 0 ? undefined : 'Required';
 
 export default validator;
+const all = {
+  addressValidator
+};
 export {
   profileValidator,
   addressValidator,
-  requiredArray
+  requiredArray,
+  all
 }

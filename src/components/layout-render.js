@@ -1,21 +1,26 @@
 import React, {useCallback, useRef} from "react";
-import {Field, useField} from "react-final-form";
+import {Field, Form, FormSpy, useField} from "react-final-form";
 import PopUp from './popup';
 
-import {Error, ViewerJson, Section, TextInput, ButtonAction} from './share-components';
+import {Error, ViewerJson, Section, TextInput, ButtonAction} from './shared-components';
+import {
+  InputPopupForm, InputFieldArray
+} from './form-component';
 
 const renderMap = {
   'input:text': TextInput,
   'input:popup': PopUp,
-  'form': Section,
+  'section': Section,
   'button:action': ButtonAction,
   'viewer:json': ViewerJson,
+  'input:field-array': InputFieldArray,
+  'input:popup-form': InputPopupForm,
 };
 
 const Render = (props, index) => {
-  const {component, items, metaData} = props;
+  const {component, items, metaData, ...rest} = props;
   if (renderMap[component]) {
-    return renderMap[component]({component, items, metaData}, index);
+    return renderMap[component]({component, items, metaData, ...rest}, index);
   } else {
     console.error(component, 'not found');
     return null;

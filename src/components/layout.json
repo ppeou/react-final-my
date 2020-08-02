@@ -1,5 +1,5 @@
 {
-  "component": "form",
+  "component": "section",
   "items": [
     {"component": "input:text",
       "metaData": {
@@ -19,41 +19,60 @@
         "label": "Email"
       }
     },
-    {"component": "viewer:json",
-      "metaData": {
-        "dataField": "address",
-        "label": "Address"
-      }
-    },
     {
       "component": "input:popup",
       "metaData": {
         "dataField": "address",
-        "label": "Address Popup"
+        "label": "Address Popup",
+        "popupButtonLabel": "View Address"
       },
       "items": [
-        {
-          "component": "input:text",
+        {"component":  "input:popup-form",
           "metaData": {
-            "dataField": "street",
-            "label": "Street"
-          }
-        },
-        {
-          "component": "input:text",
-          "metaData": {
-            "dataField": "city",
-            "label": "City"
-          }
-        },
-        {
-          "component": "button:action",
-          "metaData": {
-            "dataField": "id",
-            "label": "[ - ]"
-          }
+            "forArray": true
+          },
+          "items":[
+            {
+              "component": "input:field-array",
+              "metaData": {
+                "validator": "addressValidator",
+                "modelName": "address"
+              },
+              "items": [
+                {
+                  "component": "input:text",
+                  "metaData": {
+                    "dataField": "street",
+                    "label": "Street"
+                  }
+                },
+                {
+                  "component": "input:text",
+                  "metaData": {
+                    "dataField": "city",
+                    "label": "City"
+                  }
+                },
+                {
+                  "component": "button:action",
+                  "metaData": {
+                    "dataField": "street",
+                    "eventName": "removeItemByIndex",
+                    "label": "[ - ]"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
+    },
+    {
+      "component": "viewer:json",
+      "metaData": {
+        "dataField": "address",
+        "label": "Address"
+      }
     }
   ]
 }

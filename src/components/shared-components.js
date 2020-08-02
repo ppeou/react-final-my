@@ -1,3 +1,7 @@
+import {Field, useField} from "react-final-form";
+import React from "react";
+import Render from "./layout-render";
+
 /*const Error = ({ name }) => (
   <Field name={name} subscription={{ error: true, touched: true }}>
     {({ meta: { error, touched } }) =>
@@ -5,9 +9,6 @@
     }
   </Field>
 );*/
-import {Field, useField} from "react-final-form";
-import React from "react";
-import Render from "./layout-render";
 
 const Error = ({name}) => {
   const {
@@ -35,7 +36,7 @@ const ViewerJson = ({metaData, value}, index) => {
 
 
 const Section = ({metaData, items}, index) => {
-  return (<div key={index} idkey={index}>
+  return (<div className="section" key={index} idkey={index}>
     {
       items.map((c, idx) => Render(c, `${index}-${idx}`))
     }
@@ -75,25 +76,23 @@ const onclickGenerator = (myInput) => {
 
 
 const ButtonAction = ({metaData}, index) => {
-  const {label, dataField, arrayIndex} = metaData;
+  const {label, dataField, eventValue, eventName} = metaData;
   const loop = 10000 * 10000;
   for (let i = 0; i < loop; i++) ;
-  const onClick = (e, id) => {
+  const onClick = (e, value) => {
     e.stopPropagation();
     e.preventDefault();
-    console.log('id', arrayIndex, e);
-    const event = new CustomEvent('click', {
-      detail: {id: arrayIndex, action: 'remove-row'},
-      bubbles: true,
-      cancelable: true
-    });
+    const detail = eventName ? {eventValue, eventName} : {eventValue: value, eventName: 'click'};
+    const event = new CustomEvent('click', {detail, bubbles: true, cancelable: true});
     e.target.parentElement.dispatchEvent(event);
   };
   return (
     <div key={index} idkey={index}>
       <Field name={dataField} subscription={{value: true}}>
         {props => (
-          <button type="button" onClick={(e) => onClick(e, props.input.value)}>{label}</button>
+          <button type="button" onClick={(e) => {
+            onClick(e, props.input.value)
+          }}>{label}</button>
         )}
       </Field>
     </div>);

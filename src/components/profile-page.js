@@ -3,25 +3,26 @@ import {Form, FormSpy} from 'react-final-form';
 import {profileValidator} from './validator';
 import data from './data.json';
 import layout from './layout.json';
-import Render from './layout-render';
-import Popup from './popup';
+import LayoutRender from './layout-render';
 
 const Component = () => {
   console.log('profile-page');
   const onSubmit = (e) => {
     console.log('onSubmit', e);
   };
+  const formOptions = {
+    onSubmit,
+    initialValues: data,
+    validate: profileValidator,
+    subscription: {}
+  };
   return (<div key="profile-page">
-    <Form onSubmit={onSubmit}
-          initialValues={data}
-          validate={profileValidator}
-          subscription={{}}>
+    <Form {...formOptions}>
       {(props) => {
         return (<>
-
             <div>
               {
-                Render(layout, 'profile-page', props.form)
+                LayoutRender(layout, 'profile-page', props.form)
               }
             </div>
             <FormSpy subscription={{valid: true, submitting: true, pristine: true, values: true}}>
@@ -53,41 +54,3 @@ const Component = () => {
 };
 
 export default Component;
-/*
-<tr>
-                  <td>Name:</td>
-                  <td>
-                    <Field name="name">
-                      {props => (
-                        <div>
-                          <input {...props.input} />
-                        </div>
-                      )}
-                    </Field>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Phone:</td>
-                  <td>
-                    <Field name="phone">
-                      {props => (
-                        <div>
-                          <input {...props.input} />
-                        </div>
-                      )}
-                    </Field>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Email:</td>
-                  <td>
-                    <Field name="email">
-                      {props => (
-                        <div>
-                          <input {...props.input} />
-                        </div>
-                      )}
-                    </Field>
-                  </td>
-                </tr>
-*/
