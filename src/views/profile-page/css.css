@@ -1,0 +1,55 @@
+#profile-page {
+    --page-pd: 10px;
+    padding: var(--page-pd);
+}
+.profile-page-layout {
+    display: inline-grid;
+    width: calc(100vw - (var(--page-pd) * 2));
+    height: calc(100vh - (var(--page-pd) * 2));
+    grid-column-gap: var(--page-pd);
+    grid-row-gap: var(--page-pd);
+}
+
+.profile-page-layout > * {
+    border: solid 1px #cfcfcf;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.profile-page-layout > .top {
+    grid-column-start: 1;
+    grid-column-end: 24;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.profile-page-layout > .side {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 24;
+}
+.profile-page-layout > .main {
+    grid-column-start: 4;
+    grid-column-end: 24;
+    grid-row-start: 3;
+    grid-row-end: 23;
+}
+.profile-page-layout > .footer {
+    grid-column-start: 4;
+    grid-column-end: 24;
+    grid-row-start: 23;
+    grid-row-end: 24;
+}
+
+.aside-menu-group label {
+    display: block;
+    padding: 2px 5px;
+}
+.aside-menu-group {
+    border-bottom: solid 1px #cfcfcf;
+    border-left: solid 4px rgba(0,0,0,0);
+}
+.aside-menu-group.selected {
+    border-left: solid 4px #d0b413;
+}
+.aside-menu-group label:hover {
+    cursor: pointer;
+}

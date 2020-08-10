@@ -1,0 +1,20 @@
+{
+  "businessName": "EZ Realtor Group",
+  "address": {
+    "street": "123 Main St",
+    "city": "Houston",
+    "state": "TX"
+  },
+  "properties": [
+    {"street":  "AAA", "city":  "A1", "state": "TX", "revenue":  20},
+    {"street":  "BBB", "city":  "B1", "state": "OH", "revenue":  10},
+    {"street":  "CCC", "city":  "C1", "state": "NY", "revenue":  30}
+  ],
+  "mtickets": {
+    "count": 10,
+    "ticket": "my first ticket"
+  },
+  "staff": {
+    "staffName": "DEF"
+  }
+}

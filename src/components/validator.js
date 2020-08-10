@@ -20,7 +20,6 @@ const addressRules = [
 
 const validator = (rules) => {
   return (values, allValues) => {
-    console.log('validator',values, allValues);
     const errors = rules.reduce((p, {field, validate, errorMessage}) => {
       if (validate(values[field]) !== true) {
         p[field] = errorMessage;

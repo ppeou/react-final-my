@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import LayoutRender from './layout-render';
-import {Field, Form, FormSpy} from "react-final-form";
-import arrayMutators from 'final-form-arrays'
+import ComponentRender from '../render';
+import {Field} from 'react-final-form';
 
 const Component = ({metaData, items}, index) => {
   const {label, dataField, popupButtonLabel} = metaData;
@@ -33,7 +32,7 @@ const Component = ({metaData, items}, index) => {
               console.log('pros', open, value);
               return (<>
                 {
-                  items.map((c, i) => LayoutRender({...c, value, onSubmit, actions}, `${index}-${i}`))
+                  items.map((c, i) => ComponentRender({...c, value, onSubmit, actions}, `${index}-${i}`))
                 }
                 </>);
             }}

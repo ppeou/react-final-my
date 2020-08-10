@@ -1,0 +1,151 @@
+{
+  "component": "section",
+  "items": [
+    {
+      "component": "section",
+      "metaData": {
+        "for": "top"
+      },
+      "items": [
+        {"component": "input:text",
+          "metaData": {
+            "dataField": "businessName",
+            "label": "Business Name"
+          }
+        },
+        {"component": "input:text",
+          "metaData": {
+            "dataField": "revenue",
+            "label": "Total Revenue"
+          }
+        },
+        {
+          "component": "section",
+          "items": [
+            {"component": "input:text",
+              "metaData": {
+                "dataField": "address.street",
+                "label": "Business Address"
+              }
+            },
+            {"component": "input:text",
+              "metaData": {
+                "dataField": "address.city",
+                "label": "City"
+              }
+            },
+            {"component": "input:dropdown",
+              "metaData": {
+                "dataField": "address.state",
+                "label": "State",
+                "refList": "states",
+                "refName": "name",
+                "refValue": "abbr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "aside-menu",
+      "metaData": {
+        "for": "aside"
+      },
+      "items": [
+        {
+          "component":  "group",
+          "metaData": {"label": "Main. Ticket", "isDefault": true,
+            "scope": "mtickets"
+          },
+          "items": [
+            {
+              "component":  "input:text",
+              "metaData": {"label": "Count",
+                "dataField": "count"
+              }
+            },
+            {
+              "component":  "input:text",
+              "metaData": {"label": "Ticket 1",
+                "dataField": "ticket"
+              }
+            }
+          ]
+        },
+        {
+          "component":  "group",
+          "metaData": {"label": "Staff",
+            "scope": "staff"},
+          "items": [
+            {
+              "component":  "input:text",
+              "metaData": {"label": "Employe Name",
+                "dataField": "staffName"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "component": "section",
+      "metaData": {
+        "for": "footer"
+      },
+      "items": [
+        {
+          "component": "input:field-array-with-data-field",
+          "metaData": {
+            "dataField": "properties",
+            "validator": "addressValidator",
+            "modelName": "address",
+            "flexLayout": "column property-list"
+          },
+          "items": [
+            {
+              "component": "button:action",
+              "metaData": {
+                "dataField": "street",
+                "eventName": "removeItemByIndex",
+                "label": "[ - ]"
+              }
+            },
+            {
+              "component": "input:text",
+              "metaData": {
+                "dataField": "street",
+                "label": "Street"
+              }
+            },
+            {
+              "component": "input:text",
+              "metaData": {
+                "dataField": "city",
+                "label": "City"
+              }
+            },
+            {
+              "component": "input:dropdown",
+              "metaData": {
+                "dataField": "state",
+                "label": "State",
+                "refList": "states",
+                "refName": "name",
+                "refValue": "abbr"
+              }
+            },
+            {
+              "component": "input:text",
+              "metaData": {
+                "dataField": "revenue",
+                "label": "Revenue"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

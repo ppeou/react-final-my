@@ -1,12 +1,15 @@
 import React from 'react';
-import ProfilePage from './components/profile-page';
+import ProfilePage from './views/profile-page/profile-page';
+import './css/reset.css';
 import './App.css';
 
 function App() {
-  return (
-    <section style={{padding: '10px', margin: '10px'}}>
-      <ProfilePage/>
-    </section>
+  console.log('app');
+  return (<div>
+      <section>
+        <ProfilePage/>
+      </section>
+    </div>
   );
 }
 
