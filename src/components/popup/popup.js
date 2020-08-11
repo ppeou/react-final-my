@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ComponentRender from '../render';
 import {Field} from 'react-final-form';
 
-const Component = ({metaData, items}, index) => {
+const Component = ({metaData, items, index}) => {
   const {label, dataField, popupButtonLabel} = metaData;
   const [open, toggleOpen] = useState(false);
 

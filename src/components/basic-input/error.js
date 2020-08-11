@@ -1,11 +1,11 @@
-import {useField} from 'react-final-form';
 import React from 'react';
+import {useScopedFormField} from '../scope/provider';
 import makeItSlow from '../utils/make-it-slower';
 
-const Component = ({name}) => {
+const Error = ({name}) => {
   const {
     meta: {touched, error}
-  } = useField(name, {subscription: {touched: true, error: true}});
+  } = useScopedFormField(name, {subscription: {touched: true, error: true}});
   makeItSlow();
   return touched && error ? <span className="error">{error}</span> : null;
 };
@@ -18,4 +18,4 @@ const Component = ({name}) => {
   </Field>
 );*/
 
-export default Component;
+export default Error;

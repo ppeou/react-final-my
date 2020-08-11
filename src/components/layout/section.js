@@ -2,7 +2,7 @@ import Render from "../render";
 import React from 'react';
 import makeItSlow from '../utils/make-it-slower';
 
-const Component = ({metaData = {}, items}, index) => {
+const Section = ({metaData = {}, items, index}) => {
   const {flexLayout} = metaData;
   const cssClass = ['section'];
   if (flexLayout) {
@@ -16,4 +16,4 @@ const Component = ({metaData = {}, items}, index) => {
   </div>);
 };
 
-export default Component;
+export default Section;

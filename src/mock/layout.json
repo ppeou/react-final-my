@@ -56,6 +56,7 @@
         {
           "component":  "group",
           "metaData": {"label": "Main. Ticket", "isDefault": true,
+            "dataField": "mtickets",
             "scope": "mtickets"
           },
           "items": [
@@ -82,6 +83,26 @@
               "component":  "input:text",
               "metaData": {"label": "Employe Name",
                 "dataField": "staffName"
+              }
+            }
+          ]
+        },
+        {
+          "component":  "group",
+          "metaData": {"label": "ABCDEF", "isDefault": true,
+            "scope": "amtickets"
+          },
+          "items": [
+            {
+              "component":  "input:text",
+              "metaData": {"label": "Count",
+                "dataField": "count"
+              }
+            },
+            {
+              "component":  "input:text",
+              "metaData": {"label": "Ticket 1",
+                "dataField": "ticket"
               }
             }
           ]

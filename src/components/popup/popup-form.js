@@ -3,7 +3,7 @@ import {Form, FormSpy} from "react-final-form";
 import ComponentRender from "../render";
 import React from "react";
 
-const Component = ({metaData, items, value, actions, onSubmit}, index) => {
+const Component = ({metaData, items, value, actions, onSubmit, index}) => {
   const {forArray} = metaData;
   const hasClosePopup = forArray && actions.togglePopup;
   const formOptions = {

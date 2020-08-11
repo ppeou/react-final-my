@@ -9,8 +9,7 @@ const Abc = ({layout, index}) => {
 const MemoAbc = React.memo(Abc);
 
 
-const AsideMenu = (props, index) => {
-  const {metaData, items} = props;
+const AsideMenu = ({index, items}) => {
   const cssClass = ['aside-menu'];
   makeItSlow();
   return (<aside className={cssClass.join(' ')} key={index}>

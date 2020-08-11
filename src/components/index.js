@@ -5,6 +5,7 @@ import Section from './layout/section';
 import TextInput from './basic-input/text';
 import Dropdown from './basic-input/dropdown';
 import {ButtonAction} from './basic-input/button';
+import {withField} from './scope/provider';
 import {withDataField} from './utils/with';
 import Error from './basic-input/error';
 import InputPopupForm from './popup/popup-form';

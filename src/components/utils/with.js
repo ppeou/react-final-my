@@ -4,7 +4,7 @@ import {get} from 'lodash';
 import React from 'react';
 
 const withDataField = (Component) => {
-  return ({metaData, ...rest}, index) => {
+  return ({metaData, index, ...rest}) => {
     const {dataField} = metaData;
     return (
       <Field name={dataField} subscription={{value: true}} key={index}>

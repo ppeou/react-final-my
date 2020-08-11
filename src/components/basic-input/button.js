@@ -2,7 +2,7 @@ import makeItSlow from '../utils/make-it-slower';
 import {Field} from 'react-final-form';
 import React from 'react';
 
-const ButtonAction = ({metaData}, index) => {
+const ButtonAction = ({metaData, index}) => {
   const {label, dataField, eventValue, eventName} = metaData;
   makeItSlow();
   const onClick = (e, value) => {

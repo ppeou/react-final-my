@@ -4,7 +4,7 @@ import {FieldArray} from "react-final-form-arrays";
 import ComponentRender from "../render";
 import React from "react";
 
-const Component = ({metaData, items}, index) => {
+const Component = ({metaData, items, index}) => {
   const {validator, modelName, flexLayout} = metaData;
   const cssClass = [];
   if(flexLayout) {cssClass.push(flexLayout);}
