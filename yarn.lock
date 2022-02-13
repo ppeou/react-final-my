@@ -1357,6 +1357,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.15.4":
+  version "7.17.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
+  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.5.1", "@babel/runtime@^7.8.4":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.5.tgz#303d8bd440ecd5a491eae6117fd3367698674c5c"
@@ -2179,6 +2186,13 @@
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
+
+"@welldone-software/why-did-you-render@^4.3.0":
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/@welldone-software/why-did-you-render/-/why-did-you-render-4.3.2.tgz#db1c700df1729402f2ceacf05cebd72dca30f1af"
+  integrity sha512-pzaFmUUH+FjbsDgcMB1xNPncIaxibvo0FLbGySLIh+v+7Bp5pqSJFO6zlqo4orPLm3nAdYEgL2vrlj8befoypg==
+  dependencies:
+    lodash "^4"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -3931,7 +3945,7 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@^3.0.0, debug@^3.1.1, debug@^3.2.5:
+debug@^3.1.1, debug@^3.2.5:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
@@ -4896,6 +4910,23 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+final-form-arrays@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/final-form-arrays/-/final-form-arrays-3.0.2.tgz#9f3bef778dec61432357744eb6f3abef7e7f3847"
+  integrity sha512-TfO8aZNz3RrsZCDx8GHMQcyztDNpGxSSi9w4wpSNKlmv2PfFWVVM8P7Yj5tj4n0OWax+x5YwTLhT5BnqSlCi+w==
+
+final-form-calculate@^1.3.1:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/final-form-calculate/-/final-form-calculate-1.3.2.tgz#a5e1908d1aa34eeec6faccdba3fd9516e7fd3d4f"
+  integrity sha512-pon2K9yNbyqmF8UTpDvxwhk+Hvqpl8Fm3qgwkHniNAmCQe+6YxB1aw4cBAHzmRc39jGl2bYsvKyabQOIWLtrPg==
+
+final-form@^4.20.1:
+  version "4.20.6"
+  resolved "https://registry.yarnpkg.com/final-form/-/final-form-4.20.6.tgz#da42f3741db068c0c875e18950a2c4a9a148c63e"
+  integrity sha512-fCdwIj49KOaFfDRlXB57Eo+GghIMZQWrA9TakQI3C9uQxHwaFHXqZSNRlUdfnQmNNeySwGOaGPZCvjy58hyv4w==
+  dependencies:
+    "@babel/runtime" "^7.10.0"
+
 finalhandler@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/finalhandler/-/finalhandler-1.1.2.tgz#b7e7d000ffd11938d0fdb053506f6ebabe9f587d"
@@ -4994,11 +5025,9 @@ flush-write-stream@^1.0.0:
     readable-stream "^2.3.6"
 
 follow-redirects@^1.0.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.10.0.tgz#01f5263aee921c6a54fb91667f08f4155ce169eb"
-  integrity sha512-4eyLK6s6lH32nOvLLwlIOnr9zrL8Sm+OvW4pVTJNoXeGzYIkHVf+pADQi+OJ0E67hiuSLezPVPyBcIZO50TmmQ==
-  dependencies:
-    debug "^3.0.0"
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
+  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
 
 for-in@^0.1.3:
   version "0.1.8"
@@ -6921,6 +6950,11 @@ lodash.uniq@^4.5.0:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+lodash@^4:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lodash@^4.17.19:
   version "4.17.19"
@@ -9009,6 +9043,25 @@ react-error-overlay@^6.0.7:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha512-TAv1KJFh3RhqxNvhzxj6LeT5NWklP6rDr2a0jaTfsZ5wSZWHOGeqQyejUp3xxLfPt2UpyJEcVQB/zyPcmonNFA==
 
+react-fast-compare@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
+  integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
+
+react-final-form-arrays@^3.1.2:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/react-final-form-arrays/-/react-final-form-arrays-3.1.3.tgz#d3594c500495a4cf5e437070ada989da9624bba2"
+  integrity sha512-dzBiLfbr9l1YRExARBpJ8uA/djBenCvFrbrsXjd362joDl3vT+WhmMKKr6HDQMJffjA8T4gZ3n5+G9M59yZfuQ==
+  dependencies:
+    "@babel/runtime" "^7.12.1"
+
+react-final-form@^6.5.1:
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/react-final-form/-/react-final-form-6.5.8.tgz#08b17bc6d4124300a9f2ea1f6b2e608150d3bab0"
+  integrity sha512-j8Rmr5zAaMliNbh+CPnY734exHfk7MjQ8I6ZcykcChmPDFPV2aF40PFAcmQ/KreA10AI8ew0tff6q0gVqwFaGA==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+
 react-is@^16.12.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -11049,6 +11102,14 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+why-did-you-update@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/why-did-you-update/-/why-did-you-update-1.0.8.tgz#3c766730824598ff65ff0d96e070ffa28c0b00f9"
+  integrity sha512-P1m7cho3o+otR8+WvHYrM+SJHCdvhS+FI6NOwZm6JNdhItbDnuZFD9uxvKIQYXxAkBV5qJtCNF/e2RwCDeAV5g==
+  dependencies:
+    lodash "^4.17.11"
+    react-fast-compare "^2.0.4"
 
 word-wrap@~1.2.3:
   version "1.2.3"
